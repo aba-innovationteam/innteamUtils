@@ -27,7 +27,8 @@ pipeline thanks to the following packages and frameworks:
         only `tidyverse` package).  
     -   `plotly` for interactive graphics as is well-adopted with
         `rmarkdown` and `shiny`.  
-    -   `echarts4r` for advanced interactive graphics (*coming soon*).  
+    -   `highcharter` for advanced interactive graphics (*coming
+        soon*).  
     -   `reactable`: for interactive and static production-ready tables.
     -   `reactablefmtr`: for interactive tables and infografics (*Coming
         soon*).  
