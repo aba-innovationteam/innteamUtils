@@ -1,0 +1,8 @@
+^innteamUtils\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+^doc$
+
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

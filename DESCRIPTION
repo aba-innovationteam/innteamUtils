@@ -1,0 +1,35 @@
+Package: innteamUtils
+Title: Utilities: Themes, Datasets and Functions
+Version: 1.0.5
+Authors@R: 
+    person(given = "Alejandro",
+           family = "Abraham",
+           role = c("aut", "cre"),
+           email = "a.abraham@innovationteam.eu")
+Description: Internal Use Only. Reproduction and Distribution is forbidden.
+Depends: R (>= 4.1.2),
+    data.table,
+    magrittr,
+    ggplot2,
+    magick,
+    plotly,
+    rsvg,
+    reactable,
+    pagedown,
+    janitor
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: skimr,
+    knitr,
+    rmarkdown,
+    sysfonts
+Suggests: 
+    ggplot2,
+    mlr3verse,
+    knitr,
+    janitor,
+    rmarkdown
+VignetteBuilder: knitr

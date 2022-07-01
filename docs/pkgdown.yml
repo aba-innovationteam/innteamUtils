@@ -1,0 +1,8 @@
+pandoc: 2.11.4
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  Datasets: Datasets.html
+  theme_innteam: theme_innteam.html
+last_built: 2021-09-22T14:35Z
+
