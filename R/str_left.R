@@ -12,7 +12,9 @@
 #' @return a vector with the remaining characters from the original strings
 #' @export
 #'
-str_left <- function(string, i = 1, n) {
+str_left = function(string, i = 1, n) {
+
   substr(string, i, n)
+
 }
 

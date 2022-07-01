@@ -8,30 +8,30 @@
 #' @keywords programming error
 #' @export
 #' @examples
-#' is_error(  log(3)              )
-#' is_error(  log("a")            )
-#' is_error(  log(3),   tell=TRUE )
-#' is_error(  log("a"), tell=TRUE )
-#' stopifnot( is_error( log("a")  )  ) # or shorter:
-#' is_error(  log("a"), force=TRUE)
-#' # is_error(  log(3),   force=TRUE)
-#' stopifnot(is_error(  is_error(log(3), force=TRUE)  ))
+#' is.error(  log(3)              )
+#' is.error(  log("a")            )
+#' is.error(  log(3),   tell = TRUE )
+#' is.error(  log("a"), tell = TRUE )
+#' stopifnot( is.error( log("a")  )  ) # or shorter:
+#' is.error(  log("a"), force = TRUE)
+#' # is.error(  log(3),   force = TRUE)
+#' stopifnot(is.error(  is.error(log(3), force = TRUE)  ))
 #'
 #' @param expr Expression to be tested for returning an error
 #' @param tell Logical: Should the error message be printed via \code{\link{message}}? DEFAULT: FALSE
 #' @param force Logical: Should an error be returned if the expression is not an error? DEFAULT: FALSE
 #'
-is_error <- function(
-expr,
-tell=FALSE,
-force=FALSE
-)
-{
-expr_name <- deparse(substitute(expr))
-test <- try(expr, silent=TRUE)
-iserror <- inherits(test, "try-error")
-if(tell) if(iserror) message("Note in is_error: ", test)
-if(force) if(!iserror) stop(expr_name, " is not returning an error.", call.=FALSE)
+is.error = function(expr, tell = FALSE, force = FALSE) {
+
+    expr_name <- deparse(substitute(expr))
+    test <- try(expr, silent = TRUE)
+    iserror <- inherits(test, "try-error")
+
+    if(tell) if(iserror) message("Note in is_error: ", test)
+    if(force) if(!iserror) stop(expr_name, " is not returning an error.", call. = FALSE)
+
 # output:
-iserror
+
+    iserror
+
 }

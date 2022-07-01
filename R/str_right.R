@@ -14,7 +14,9 @@
 #'
 # This counts from the right and then extract n characters
 
-str_right <- function(string, i = 1, n) {
+str_right = function(string, i = 1, n) {
+
   substr(string, nchar(string) - (n - i), nchar(string))
+
 }
 

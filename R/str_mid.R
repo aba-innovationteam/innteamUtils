@@ -13,7 +13,8 @@
 #'
 # This extract characters from the middle
 
-str_mid <- function(string, i = 2, e = 5){
+str_mid = function(string, i = 2, e = 5){
 
   substr(string, i, e)
+
 }

@@ -39,11 +39,11 @@ ggplot2::ggsave(filename = path_img,
                 dpi = dpiIT)
 
 
-plot <- image_read(path_img)
-logo_raw <- image_read(pkg_resource("img/banner_plot.png"))
+plot = image_read(path_img)
+logo_raw = image_read(pkg_resource("img/banner_plot.png"))
 
 
-logo <- logo_raw %>%
+logo = logo_raw |>
   image_scale("1000")
 
 

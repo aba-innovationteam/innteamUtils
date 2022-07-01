@@ -18,18 +18,23 @@ paged_windmill = function(logo = "0",
                            ...) {
 
     main_css = pkg_resource("css/style_windmill.css")
+
     pandoc_html <-
       pkg_resource("html/template_paged.html")
 
     # default img
     if (front_img == "0") {
+
       front_img <-
         pkg_resource("img/cover.png")
+
     }
 
     if (logo == "0") {
+
       logo <-
         pkg_resource("logo/circle-logo.svg")
+
     }
 
     # darken img
@@ -37,16 +42,19 @@ paged_windmill = function(logo = "0",
       # opacity
       front_img_init <-
         magick::image_read(front_img)
+
       front_img_ok <-
         magick::image_colorize(front_img_init, opacity = 50, color = "black")
 
       # path to image
       front_img <- paste0(tempfile("img"), ".jpg")
       magick::image_write(front_img_ok, front_img, format = "jpg")
+
     }
 
     # logo to white - logo should be svg
     if (logo_to_white == TRUE) {
+
       logo_init <- magick::image_read_svg(logo)
       logo_ok <-
         magick::image_colorize(logo_init, opacity = 0, color = "white")
@@ -54,6 +62,7 @@ paged_windmill = function(logo = "0",
       # path to logo
       logo <- paste0(tempfile("logo"), ".svg")
       magick::image_write(logo_ok, logo, format = "svg")
+
     }
 
     # template
@@ -64,4 +73,5 @@ paged_windmill = function(logo = "0",
       back_cover = logo,
       ...
     )
+
   }

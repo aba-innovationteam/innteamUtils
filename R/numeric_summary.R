@@ -18,7 +18,7 @@
 #' }
 #' @export
 #'
-numeric_summary <- function(x, na.rm){
+numeric_summary = function(x, na.rm){
 
     if(!is.numeric(x)){
 

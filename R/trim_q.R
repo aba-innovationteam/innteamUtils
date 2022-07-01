@@ -14,7 +14,7 @@
 #' @return a shorter or equal length vector.
 #' @export
 
-trim_q <- function(x, lowbound = 0, upbound = 1) {
+trim_q = function(x, lowbound = 0, upbound = 1) {
 
   x[(x > quantile(x, lowbound)) & (x < quantile(x, upbound))]
 

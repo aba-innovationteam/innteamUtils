@@ -15,9 +15,9 @@
 
 # keep columns with pattern and other
 
-keep_cols <- function(DT, pattern, ...) {
+keep_cols = function(DT, pattern, ...) {
 
-    keeped <- unlist(c(list(...), grep(as.character(pattern), names(DT), value = TRUE)), recursive = TRUE, use.names = TRUE)
+    keeped = unlist(c(list(...), grep(as.character(pattern), names(DT), value = TRUE)), recursive = TRUE, use.names = TRUE)
 
     return(keeped)
 

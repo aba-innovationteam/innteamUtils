@@ -13,13 +13,14 @@
 #' @importFrom sysfonts font_add_google
 #' @import ggplot2
 #'
-theme_innteam <- function(base_size = 12, base_family = 'open-sans', base_line_size = base_size/22, base_rect_size = base_size/22) {
+theme_innteam = function(base_size = 12, base_family = 'open-sans', base_line_size = base_size/22, base_rect_size = base_size/22) {
 
 sysfonts::font_add(family = "open-sans", regular = pkg_resource("fonts/OpenSans-Light.ttf"), italic = pkg_resource("fonts/OpenSans-LightItalic.ttf"))
 
-half_line <- base_size / 2
+half_line = base_size / 2
 
-t <-
+t =
+
    theme(
 
 
@@ -173,5 +174,7 @@ t <-
 
 
     complete = TRUE
+
   )
+
 }

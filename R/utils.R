@@ -1,7 +1,11 @@
-pkg_resource <- function(...) {
+pkg_resource = function(...) {
+
   system.file("resources", ..., package = "innteamUtils", mustWork = TRUE)
+
 }
 
-pkg_font <- function(...) {
+pkg_font = function(...) {
+
   system.file("resources", ..., package = "innteamUtils", mustWork = TRUE)
+
 }

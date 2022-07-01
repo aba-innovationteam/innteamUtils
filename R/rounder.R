@@ -12,7 +12,7 @@
 #' @return an equal length vector.
 #' @export
 
-rounder <- function(x, roundTo, dir = 'up') {
+rounder = function(x, roundTo, dir = 'up') {
 
   if(dir == 1) {  ##ROUND UP
 
