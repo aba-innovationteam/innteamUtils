@@ -5,32 +5,43 @@
 
 ## Introduction
 
-The `innteamUtils` offers a collection of themes, datasets and (*coming
-soon*) functions for daily activities to encourage openness and engage
-achieve reproducibility throughout the organization.
+The `innteamUtils` offers a collection of functions themes and datasets
+to enhance productivity on daily coding and reproducibility throughout
+the organization.
 
 It is *light on dependencies* (and will be in the future), for better
 performance and ease of maintenance. It also, as part of the same
-philosophy, adopts “fast end-to-end production pipeline” thanks to the
-following packages and frameworks:
+philosophy, adopts “fully integrated end-to-end platform” production
+pipeline thanks to the following packages and frameworks:
 
 -   **General Framework**: `data.table` is completely written in base
     `R` and is blazing fast.
+
 -   **Visualization**:
+
     -   `ggplot2` for static graphics and production-ready plots (the
         only `tidyverse` package).  
     -   `plotly` for interactive graphics as is well-adopted with
         `rmarkdown` and `shiny`.  
+    -   `echarts4r` for advanced interactive graphics (*coming soon*).  
     -   `reactable`: for interactive and static production-ready tables.
     -   `reactablefmtr`: for interactive tables and infografics (*Coming
         soon*).  
-    -   `shiny` apps: **TBD**, probably a template with theme options.
+    -   `bslib` for Shiny apps: **TBD**, probably a template with theme
+        options.
+
 -   **Reporting**:
+
     -   `pagedown`: unique framework for PDF + HTML documentation. Fast
         rendering thanks to `chrome` browsing instead of `LaTeX`.
+    -   In a near future we plan to migrate `.Rmd` templates to
+        **Quarto** as soon as it is a mature technology.
+
 -   **Machine Learning**: `mlr3verse` which seeks a production-ready
     approach like `python` for `R` and is fully built upon `data.table`
     and uses `R6` objects (for stability and speed).
+
+-   
 
 ### License and Permissions
 
@@ -63,7 +74,9 @@ documents in HTML format.
 - *Paged Report* for professional looking PDF and HTML reports
 (lightweight and fast rendering).  
 - **Datasets**: tables useful for common issues regarding data cleaning
-activities (e.g. `codice_ateco` or `decodifica_comuni`).
+activities (e.g. `codice_ateco` or `decodifica_comuni`).  
+- **Operators**: expansions operators to improve readability of code.
+(`%notin%` == `negate(%in%)`).
 
 It also possible and probably more convenient to set the themes in the
 session options to avoid verbose code and enable easier reproducibility,
