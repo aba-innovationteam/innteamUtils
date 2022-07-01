@@ -13,6 +13,8 @@
 #' @return a boolean vector type TRUE if interger64, FALSE otherwise.
 #' @export
 #'
-is_integer64 <- function(x){
+is_integer64 <- function(x) {
+
   class(x)=="integer64"
+
 }

@@ -7,7 +7,7 @@
 object_name(object)
 }
 \arguments{
-\item{DT}{a data.table to obtain column names from.}
+\item{object}{R object.}
 }
 \value{
 a character value or vector.

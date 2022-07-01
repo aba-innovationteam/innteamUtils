@@ -8,6 +8,8 @@ clean_names(dat, ...)
 }
 \arguments{
 \item{dat}{is a data.table.}
+
+\item{...}{other arguments coming from the janitor packages.}
 }
 \value{
 data.table .

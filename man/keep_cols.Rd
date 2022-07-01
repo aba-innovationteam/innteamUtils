@@ -10,9 +10,11 @@ keep_cols(DT, pattern, ...)
 \item{DT}{a data.table to obtain column names from.}
 
 \item{pattern}{a string containing the patterns to look for in the column names}
+
+\item{...}{other arguments coming from the grep function}
 }
 \value{
-a vector to be plugged into a data.table (DT\link{, ..keeped}) for subsetting.
+a vector to be plugged into a data.table's "..j" for subsetting.
 }
 \description{
 A function that emulates dplyr's .contains helper function combined with select, to subset columns combining a list and a pattern.

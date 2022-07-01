@@ -10,16 +10,14 @@
 #' @return A pagedown template
 #' @export
 #'
-paged_windmill <-
-  function(logo = "0",
-           front_img = "0",
-           img_to_dark = TRUE,
-           logo_to_white = FALSE,
-           other_css = NULL,
-           ...) {
-    # arguments
-    main_css <-
-      pkg_resource("css/style_windmill.css")
+paged_windmill = function(logo = "0",
+                           front_img = "0",
+                           img_to_dark = TRUE,
+                           logo_to_white = FALSE,
+                           other_css = NULL,
+                           ...) {
+
+    main_css = pkg_resource("css/style_windmill.css")
     pandoc_html <-
       pkg_resource("html/template_paged.html")
 

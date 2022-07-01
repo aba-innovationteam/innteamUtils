@@ -14,8 +14,11 @@
 missing_perc <- function(DT) {
 
     DT[DT == ""] <- NA
+
     DT[, lapply(.SD, function(x) {
                                 paste0(round(((sum(is.na(x)) / .N) * 100), digits = 2), '%')
                                     }) ]
+
+    return(DT)
 
 }

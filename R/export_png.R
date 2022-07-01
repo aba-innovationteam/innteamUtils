@@ -11,21 +11,32 @@
 #'
 #' @return A print/publication-ready PNG file with logo banner
 #'
+#' @importFrom here here
+#' @importFrom magick image_read
+#' @importFrom magick image_append
+#' @importFrom magick image_scale
+#' @importFrom magick image_write
+#' @import ggplot2
+#'
 #' @export
 #'
-export_png <- function(path_destination = NULL, widthIT = 10, heightIT = 6, dpiIT = 320) {
+export_png = function(path_destination = NULL, widthIT = 10, heightIT = 6, dpiIT = 320) {
 
 if (!is.null(path_destination)) {
-      path_img = here::here(paste0(paste0(as.character(path_destination), sep = '/'), last_plot()$labels$title, ".png"))
+
+      path_img = here::here(paste0(paste0(as.character(path_destination), sep = '/'), ggplot2::last_plot()$labels$title, ".png"))
+
 } else {
-      path_img = here::here(paste0(last_plot()$labels$title, ".png"))
+
+      path_img = here::here(paste0(ggplot2::last_plot()$labels$title, ".png"))
+
     }
 
 
-ggsave(filename = path_img,
-          width = widthIT,
-          height = heightIT,
-          dpi = dpiIT)
+ggplot2::ggsave(filename = path_img,
+                width = widthIT,
+                height = heightIT,
+                dpi = dpiIT)
 
 
 plot <- image_read(path_img)

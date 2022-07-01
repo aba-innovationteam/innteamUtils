@@ -1,7 +1,6 @@
 ---
 title: "Datasets for Common Activities"
-output: 
-    rmarkdown::html_vignette
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Datasets for Common Activities}
   %\VignetteEngine{knitr::rmarkdown}

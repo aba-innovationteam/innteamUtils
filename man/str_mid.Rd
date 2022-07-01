@@ -12,8 +12,6 @@ str_mid(string, i = 2, e = 5)
 \item{i}{character number from which to start counting.}
 
 \item{e}{character number where to stop counting.}
-
-\item{n}{number of characters to extract.}
 }
 \value{
 a vector with the remaining characters from the original strings

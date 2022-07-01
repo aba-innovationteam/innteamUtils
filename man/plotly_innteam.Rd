@@ -17,6 +17,8 @@ plotly_innteam(
 \arguments{
 \item{plot}{plotly plot}
 
+\item{...}{other arguments coming from the plotly packages.}
+
 \item{plot_title}{plot margin}
 
 \item{plot_subtitle}{plot background}
@@ -31,16 +33,19 @@ plotly_innteam(
 Innovation Team Plotly Theme
 }
 \examples{
+library(data.table)
+library(plotly)
+
 df <- data.table(State = state.name,
                 LifeExp = state.x77[,4],
                 Population = state.x77[,1])
 
-df \%>\%
- plot_ly(x = ~LifeExp, y = ~Population, type = "scatter", width = 900, height = 500) \%>\%
+df |>
+ plot_ly(x = ~LifeExp, y = ~Population, type = "scatter", width = 900, height = 500) |>
    plotly_innteam(plot_title = 'This is my title',
                   plot_subtitle = 'Here we will see a subtitle',
                   plot_caption = 'Source: innteamUtils package',
                   plot_xaxis = 'LifeExp',
                   plot_yaxis = 'Population')
-  )
+
 }

@@ -6,25 +6,12 @@
 #'
 #' @author Alejandro Abraham <a.abraham@innovationteam.eu>
 #'
-#' @examples
-#'library(innteamUtils)
-#'mtcars <- as.data.table(mtcars)
-#'mtcars[, cyl := as.factor(cyl)] %>%
-#'  ggplot(aes(x = mpg,
-#'             y = hp,
-#'             color = cyl)) +
-#'  geom_point(size = 2, shape = 16) +
-#'      scale_color_brewer(type = 'qual', palette = 7) +
-#'      scale_fill_brewer(type = 'qual', palette = 7) +
-#'          labs(title = 'Sample plot mtcars',
-#'               subtitle = 'Another plot with mtcars but innteam theme',
-#'               caption = 'The plot theme colour and fonts are identical with the rmarkdown file templates') +
-#'  theme_innteam()
 #'
 #' @export
 #'
 #' @importFrom grid unit
 #' @importFrom sysfonts font_add_google
+#' @import ggplot2
 #'
 theme_innteam <- function(base_size = 12, base_family = 'open-sans', base_line_size = base_size/22, base_rect_size = base_size/22) {
 

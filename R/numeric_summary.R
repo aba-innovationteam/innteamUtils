@@ -21,12 +21,14 @@
 numeric_summary <- function(x, na.rm){
 
     if(!is.numeric(x)){
+
         stop("data must be numeric")
+
     }
 
-    data.table(min = min(x, na.rm = na.rm),
-               median = median(x, na.rm = na.rm),
-               sd = sd(x, na.rm = na.rm),
-               max = max(x, na.rm = na.rm)
-               )
+    data.table::data.table(min = min(x, na.rm = na.rm),
+                           median = median(x, na.rm = na.rm),
+                           sd = sd(x, na.rm = na.rm),
+                           max = max(x, na.rm = na.rm)
+                           )
 }

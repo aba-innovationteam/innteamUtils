@@ -88,7 +88,6 @@ options(reactable.theme = react_format)
 
 ## Vignettes
 
-```{r, include=FALSE, eval=FALSE}
 Each functionality and element information and usage can be found in their respective vignette. 
 
 [Innovation Team Standard R Theming kit](doc/theme_innteam.html)
@@ -97,9 +96,6 @@ Each functionality and element information and usage can be found in their respe
 
 To access them you may also type `vignette("innteamUtils")` in RStudio for a quick-start guide.
 
-```
-
-*Coming soon*
 
 
 ## Claims and Issues

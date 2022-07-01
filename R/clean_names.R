@@ -3,6 +3,7 @@
 #' Snames case colnames.
 #'
 #' @param dat is a data.table.
+#' @param ... other arguments coming from the janitor packages.
 #'
 #' @author Alejandro Abraham <a.abraham@innovationteam.eu>
 #' @importFrom janitor clean_names
@@ -11,10 +12,10 @@
 #' @return data.table .
 #' @export
 
-clean_names <- function(dat, ...) {
+clean_names = function(dat, ...) {
 
-  dt = as.data.table(clean_names(dat, ...))
+  dat = janitor::clean_names(dat, ...)
 
-  return(dt)
+  return(dat)
 
 }

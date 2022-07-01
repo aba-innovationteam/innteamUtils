@@ -93,7 +93,15 @@ especially on documents:
 
 ## Vignettes
 
-*Coming soon*
+Each functionality and element information and usage can be found in
+their respective vignette.
+
+[Innovation Team Standard R Theming kit](doc/theme_innteam.html)
+
+[Datasets for Daily Activities](doc/Datasets.html)
+
+To access them you may also type `vignette("innteamUtils")` in RStudio
+for a quick-start guide.
 
 ## Claims and Issues
 

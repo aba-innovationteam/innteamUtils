@@ -23,22 +23,6 @@ theme_innteam(
 \description{
 Contains the parameters and colour for a standarized plot theme.
 }
-\examples{
-library(innteamUtils)
-mtcars <- as.data.table(mtcars)
-mtcars[, cyl := as.factor(cyl)] \%>\%
- ggplot(aes(x = mpg,
-            y = hp,
-            color = cyl)) +
- geom_point(size = 2, shape = 16) +
-     scale_color_brewer(type = 'qual', palette = 7) +
-     scale_fill_brewer(type = 'qual', palette = 7) +
-         labs(title = 'Sample plot mtcars',
-              subtitle = 'Another plot with mtcars but innteam theme',
-              caption = 'The plot theme colour and fonts are identical with the rmarkdown file templates') +
- theme_innteam()
-
-}
 \author{
 Alejandro Abraham \href{mailto:a.abraham@innovationteam.eu}{a.abraham@innovationteam.eu}
 }

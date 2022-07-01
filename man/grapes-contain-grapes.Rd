@@ -6,6 +6,11 @@
 \usage{
 strings \%contain\% matchVec
 }
+\arguments{
+\item{strings}{a chraracter vector containg strings .}
+
+\item{matchVec}{class character object, not vector, containing patterns.}
+}
 \description{
 An operator that matches the patterns on a vector of strings.
 }

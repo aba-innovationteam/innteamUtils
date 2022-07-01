@@ -7,7 +7,9 @@
 diff_years(base_date, tap_date)
 }
 \arguments{
-\item{DT}{a data.table to obtain column names from.}
+\item{base_date}{lower bound date, must be a date clase object.}
+
+\item{tap_date}{upper bound date, must be a date clase object.}
 }
 \value{
 a one row data.table keeping original names.

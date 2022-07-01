@@ -8,6 +8,10 @@ trim_q(x, lowbound = 0, upbound = 1)
 }
 \arguments{
 \item{x}{is a numeric vector or variable.}
+
+\item{lowbound}{lower bound percentile (in decimals).}
+
+\item{upbound}{upper bound percentile (in decimals).}
 }
 \value{
 a shorter or equal length vector.
