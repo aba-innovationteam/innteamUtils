@@ -9,6 +9,7 @@
 #'
 #' @author Alejandro Abraham <a.abraham@innovationteam.eu>
 #' @import data.table
+#' @importFrom  stats quantile
 #'
 #'
 #' @return a shorter or equal length vector.
@@ -16,6 +17,6 @@
 
 trim_q = function(x, lowbound = 0, upbound = 1) {
 
-  x[(x > quantile(x, lowbound)) & (x < quantile(x, upbound))]
+  x[(x > stats::quantile(x, lowbound)) & (x < stats::quantile(x, upbound))]
 
 }
