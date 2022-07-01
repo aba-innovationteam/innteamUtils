@@ -1,14 +1,10 @@
-#' Contain Operator
+#' %contains% Operator
 #'
-#'  like %in%, but greps for all the patterns (rhs) within the strings (lhs)
+#' An operator that matches the patterns on a vector of strings.
 #'
-#' @param strings is a vector of character strings.
-#' @param matchVec a vector with patterns to be matched in the vector strings
 #'
 #' @author Alejandro Abraham <a.abraham@innovationteam.eu>
 #'
-#'
-#' @return an equal length vector.
 #' @export
 
 

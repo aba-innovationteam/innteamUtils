@@ -2,7 +2,7 @@
 % Please edit documentation in R/notin.R
 \name{\%notin\%}
 \alias{\%notin\%}
-\title{\%notint\% Operator}
+\title{\%notin\% Operator}
 \usage{
 ... \%notin\% NA
 }

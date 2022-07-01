@@ -1,6 +1,5 @@
 #' Check if an expression returns an error
 #'
-#' Does a given expression return an error?
 #' Useful for tests where you want to make sure your function throws an error.
 #'
 #' @return TRUE/FALSE

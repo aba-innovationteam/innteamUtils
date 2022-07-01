@@ -2,7 +2,8 @@
 % Please edit documentation in R/is_interger64.R
 \name{is_integer64}
 \alias{is_integer64}
-\title{Interger 64 Vectors}
+\title{Interger 64 Vectors
+Evaluates if the elements on a vector are of class "interger64". Relevant for data.table functions.}
 \usage{
 is_integer64(x)
 }
@@ -13,9 +14,6 @@ is_integer64(x)
 a boolean vector type TRUE if interger64, FALSE otherwise.
 }
 \description{
-Interger 64 Vectors
-}
-\details{
 is.interger64 is a more general test of an object being interpretable as integers 64 bit encoded
 }
 \author{

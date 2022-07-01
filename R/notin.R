@@ -1,4 +1,4 @@
-#' %notint% Operator
+#' %notin% Operator
 #'
 #' An operator to negate vector searching (!%in%)
 #'

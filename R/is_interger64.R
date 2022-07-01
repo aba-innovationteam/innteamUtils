@@ -1,5 +1,5 @@
 #' Interger 64 Vectors
-#'
+#' Evaluates if the elements on a vector are of class "interger64". Relevant for data.table functions.
 #'
 #'
 #' is.interger64 is a more general test of an object being interpretable as integers 64 bit encoded

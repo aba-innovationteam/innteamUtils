@@ -17,7 +17,6 @@ is_error(expr, tell = FALSE, force = FALSE)
 TRUE/FALSE
 }
 \description{
-Does a given expression return an error?
 Useful for tests where you want to make sure your function throws an error.
 }
 \examples{
