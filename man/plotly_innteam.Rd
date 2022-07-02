@@ -15,19 +15,19 @@ plotly_innteam(
 )
 }
 \arguments{
-\item{plot}{plotly plot}
+\item{plot}{plotly plot object}
 
-\item{...}{other arguments coming from the plotly packages.}
+\item{...}{inherit arguments coming from the plotly's layout function}
 
-\item{plot_title}{plot margin}
+\item{plot_title}{Main title}
 
-\item{plot_subtitle}{plot background}
+\item{plot_subtitle}{Subtitle in default position}
 
-\item{plot_caption}{font color}
+\item{plot_caption}{Caption in default position}
 
-\item{plot_xaxis}{font color}
+\item{plot_xaxis}{x-axis text}
 
-\item{plot_yaxis}{font color}
+\item{plot_yaxis}{y-axis text}
 }
 \description{
 Innovation Team Plotly Theme

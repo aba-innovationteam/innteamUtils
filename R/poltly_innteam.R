@@ -1,12 +1,12 @@
 #' Innovation Team Plotly Theme
 #'
-#' @param plot plotly plot
-#' @param plot_title plot margin
-#' @param plot_subtitle plot background
-#' @param plot_caption font color
-#' @param plot_xaxis font color
-#' @param plot_yaxis font color
-#' @param ... other arguments coming from the plotly packages.
+#' @param plot plotly plot object
+#' @param plot_title Main title
+#' @param plot_subtitle Subtitle in default position
+#' @param plot_caption Caption in default position
+#' @param plot_xaxis x-axis text
+#' @param plot_yaxis y-axis text
+#' @param ... inherit arguments coming from the plotly's layout function
 #' @importFrom plotly layout
 #' @export
 #' @examples
