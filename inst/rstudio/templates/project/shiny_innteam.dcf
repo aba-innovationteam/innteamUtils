@@ -1,6 +1,6 @@
 Binding: shiny_innteam
-Title: Shiny Application (Innovation Team)
-OpenFiles: README.md
+Title: Shiny App (Innovation Team)
+OpenFiles: README.md, app.R
 Icon: innteamUtils_fav.png
 
 

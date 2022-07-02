@@ -1,6 +1,8 @@
 
 shiny_innteam = function(path, ...) {
 
+  path = normalizePath(path, mustWork = FALSE)
+
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
   dots = list(...)
@@ -47,17 +49,14 @@ shiny_innteam = function(path, ...) {
 
   # file structure files
 
-  dir.create(paste0(path, '/Overview'))
-  dir.create(paste0(path, '/Documents'))
-  dir.create(paste0(path, '/00.setup'))
-  dir.create(paste0(path, '/02.ui'))
-  dir.create(paste0(path, '/03.server'))
-  dir.create(paste0(path, '/04.input'))
-  dir.create(paste0(path, '/05.output'))
-  dir.create(paste0(path, '/06.scratch'))
+  from <- shiny_sys("shinyfiles")
+
+  # Copy over whole directory
+  fs::dir_copy(path = from, new_path = path, overwrite = TRUE)
 
     ### Create Meta File ----
   # for project info
+
   if(meta) {
 
     dir.create(paste0(path, '/.ProjData'))

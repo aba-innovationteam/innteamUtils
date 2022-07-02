@@ -19,6 +19,8 @@ knitr::opts_chunk$set(echo=TRUE,
 options(knitr.kable.NA = '')
 
 library(innteamUtils)
+library(ggplot2)
+library(kableExtra)
 library(katex)
 theme_set(theme_innteam())
 
