@@ -33,10 +33,9 @@ plotly_innteam(
 Innovation Team Plotly Theme
 }
 \examples{
-library(data.table)
 library(plotly)
 
-df <- data.table(State = state.name,
+df = data.table(State = state.name,
                 LifeExp = state.x77[,4],
                 Population = state.x77[,1])
 

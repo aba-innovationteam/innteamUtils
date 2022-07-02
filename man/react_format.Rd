@@ -18,6 +18,7 @@ Contains the parameters and colour for a standarized table theme.
 }
 \examples{
 library(innteamUtils)
+library(reactable)
 reactable(iris, theme = react_format,
          highlight = TRUE, striped = TRUE, filterable = TRUE, resizable = TRUE, wrap = FALSE)
 

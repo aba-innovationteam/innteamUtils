@@ -1,11 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![INNOVATIONTEAM](https://img.shields.io/badge/INNOVATION%20TEAM-darkgreen?style=for-the-badge)](mbsconsulting.com)
+[![INNOVATIONTEAM](https://img.shields.io/badge/INNOVATION-TEAM-037f8c?style=for-the-badge)](mbsconsulting.com)
 ![LIFECYCLE
-MATURING](https://img.shields.io/badge/LIFECYCLE%20MATURING-orange?style=for-the-badge)
+MATURING](https://img.shields.io/badge/LIFECYCLE-MATURING-d08770?style=for-the-badge)
 [![Made with
-R](https://img.shields.io/badge/Made%20with-R-blue?style=for-the-badge&logo=r)](https://cran.r-project.org/)
+R](https://img.shields.io/badge/Made%20with-rstats-88c0d0?style=for-the-badge&logo=r)](https://cran.r-project.org/)
 
 # INNTEAMUTILS <a href="https://mbsconsulting.com"><img src="man/figures/logo.png" align="right" height="180" /></a>
 
@@ -100,12 +100,12 @@ especially on documents:
 
 ## Vignettes
 
-Each functionality and element information and usage can be found in
-their respective vignette.
+(*Comin soon*) Each functionality and element information and usage can
+be found in their respective vignette.
 
-[Innovation Team Standard R Theming kit](doc/theme_innteam.html)
-
-[Datasets for Daily Activities](doc/Datasets.html)
+-   `vignette("Datasets")` explore Innovation Team Standard R Theming
+    kit.
+-   `vignette("theme_innteam")` Datasets for Daily Activities.
 
 To access them you may also type `vignette("innteamUtils")` in RStudio
 for a quick-start guide.

@@ -1,5 +1,5 @@
 Package: innteamUtils
-Title: Utilities: Themes, Datasets and Functions
+Title: Utilities: Themes, Datasets and Functions by Innovation Team
 Version: 1.1.0
 Authors@R: 
     person(given = "Alejandro",
@@ -9,10 +9,10 @@ Authors@R:
 Description: Internal Use Only. Reproduction and Distribution is forbidden.
 Depends: R (>= 4.1.0),
     data.table,
+Imports: 
     ggplot2,
     plotly,
-    reactable
-Imports: 
+    reactable,
     magick,
     pagedown,
     janitor,

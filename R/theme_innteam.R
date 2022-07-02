@@ -10,8 +10,11 @@
 #' @export
 #'
 #' @importFrom grid unit
+#' @importFrom data.table data.table
 #' @importFrom sysfonts font_add_google
 #' @import ggplot2
+#'
+#'
 #'
 theme_innteam = function(base_size = 12, base_family = 'open-sans', base_line_size = base_size/22, base_rect_size = base_size/22) {
 
