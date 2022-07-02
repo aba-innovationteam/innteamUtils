@@ -1,0 +1,40 @@
+---
+title: "Innovation Team Standard R Theming kit"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Innovation Team Standard R Theming kit}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#",
+    error = FALSE,
+     tidy = FALSE,
+    cache = FALSE,
+ collapse = TRUE
+)
+```
+
+```{r setup}
+library(innteamUtils)
+```
+
+## Introduction
+
+A great deal of the current package is dedicated to theming and reporting means. Communication is a central skill in nowadays data analysis, therefore the following achievements are seeked:  
+- Standardization: sign of professionalism, makes a greater visual impact and allows better storytelling.  
+- Time Saving: standard themes provide the code and arrangements, saving typing and thinking on visual aspects.  
+- Spillover Effect: more time and energy available for analytical aspects.  
+
+## Theme Elements:  
+
+For these purposes, the package contains:  
+- **Report PDF/HTML ready**: A curated skeleton easy and lightweight to rendering thanks to `pagedown`, with front and back cover. Available in the **Rmarkdown Templates**.  
+- **Quick HTML Document**: a simple HTML document, lightweight and concise. Available in the **Rmarkdown Templates**.   
+- `ggplot2` **theme**: a ready out-of-the-box theme for plots via theme function.  
+    - `+ theme_innteam()`  
+- **PNG export**: optional with the `ggplot2` theme, this option allows to print plots as PNG's with a brand bottom banner.  
+    - `export_png()`
+
