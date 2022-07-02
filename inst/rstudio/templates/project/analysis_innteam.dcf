@@ -1,0 +1,54 @@
+Binding: analysis_innteam
+Title: Analytics Project (Innovation Team)
+OpenFiles: README.md
+Icon: innteamUtils_fav.png
+
+
+Parameter: CLIENT
+Widget: TextInput
+Label: Client Name
+Default: MBS
+Position: Right
+
+Parameter: PROJECT
+Widget: TextInput
+Label: Description
+Default:
+Position: Right
+
+Parameter: DS1
+Widget: TextInput
+Label: Data Scientist 1
+Default:
+Position: Right
+
+Parameter: DS2
+Widget: TextInput
+Label: Data Scientist 2
+Default:
+Position: Right
+
+Parameter: git_init
+Widget: CheckboxInput
+Label: Initialize Git Repo
+Default: On
+Position: Left
+
+Parameter:initcommit
+Widget:CheckboxInput
+Label:Initial Commit with README
+Default: On
+Position:Left
+
+Parameter: nodata
+Widget: SelectInput
+Label: Exclude Data from git
+Fields: No, By File Type, By Location
+Default: By Location
+Position: Left
+
+Parameter: meta
+Widget: CheckboxInput
+Label: Store Project Data
+Default: On
+Position: Left

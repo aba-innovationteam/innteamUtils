@@ -15,6 +15,7 @@ Imports:
     reactable,
     magick,
     pagedown,
+    git2r,
     janitor,
     here,
     lubridate,

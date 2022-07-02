@@ -2,6 +2,7 @@
 
 export("%contain%")
 export(clean_names)
+export(create_readme)
 export(diff_years)
 export(export_png)
 export(is.error)
