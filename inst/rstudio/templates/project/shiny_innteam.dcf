@@ -30,7 +30,7 @@ Position: Right
 
 Parameter: git_init
 Widget: CheckboxInput
-Label: Initialize Git Repo
+Label: Initialize Git Repository
 Default: On
 Position: Left
 

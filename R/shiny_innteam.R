@@ -9,7 +9,8 @@ shiny_innteam = function(path, ...) {
   ProjectName = paste0(path)
 
   ### Setup ReadMe Files ----
-  readme = c(paste0("# ", ProjectName, "  "),
+  readme = c(" ",
+             paste0("# ", ProjectName, "  "),
               " ",
               paste0("**Client Name:**", " ", CLIENT, "  "),
               " ",
@@ -26,9 +27,9 @@ shiny_innteam = function(path, ...) {
               " ",
               "--------------|----------------------------------------------------------",
               " ",
-        paste("Overview      |  This folder contains the scope of work and ",
+        paste("OVERVIEW      |  This folder contains the scope of work and ",
               "other relevant information for the project. "),
-        paste("Documents     |  contains the background information provided ",
+        paste("DOCUMENTS     |  contains the background information provided ",
               "by the client and for the analysis"),
               "UI            |  contains all R scripts to create the User Interface.",
               "SERVER        |  contains the R scripts to build the server logic and its modules.",
@@ -42,7 +43,18 @@ shiny_innteam = function(path, ...) {
   writeLines(paste0(readme, collapse = '\n'),
              con = file.path(path, "README.md"))
 
-  # readme files
+
+
+  # file structure files
+
+  dir.create(paste0(path, '/Overview'))
+  dir.create(paste0(path, '/Documents'))
+  dir.create(paste0(path, '/00.setup'))
+  dir.create(paste0(path, '/02.ui'))
+  dir.create(paste0(path, '/03.server'))
+  dir.create(paste0(path, '/04.input'))
+  dir.create(paste0(path, '/05.output'))
+  dir.create(paste0(path, '/06.scratch'))
 
     ### Create Meta File ----
   # for project info

@@ -32,8 +32,7 @@ pipeline thanks to the following packages and frameworks:
     -   `reactable`: for interactive and static production-ready tables.
     -   `reactablefmtr`: for interactive tables and infografics (*Coming
         soon*).  
-    -   `bslib` for Shiny apps: **TBD**, probably a template with theme
-        options.
+    -   `bslib` for Shiny apps productiong-grade UI features..
 -   **Reporting**:
     -   `pagedown`: unique framework for PDF + HTML documentation. Fast
         rendering thanks to `chrome` browsing instead of `LaTeX`.
@@ -64,15 +63,19 @@ latest stable version is `1.0.0`.
 ## Elements
 
 The main components present in the latest stable version are:  
+- **`rmarkdown` Report Templates**: - *HTML Doc* for quick and light
+documents in HTML format.  
+- *Paged Report* for professional looking PDF and HTML reports
+(lightweight and fast rendering).  
+- **RStudio Project Templates**: standardized templates for
+reproducibility and optimal workflow by specific task.  
+- **Shiny Theme Templates**: standardized `CSS` and `JS` structures for
+production-grade Apps.  
 - **`ggplot2` theme**: calling `plot(...) + theme_innteam()`  
 - **`reactable` theme**: calling
 `reactable(..., theme = react_format)`  
 - **`plotly` theme**: calling
 `df %>% plot_ly(...) %>% plotly_innteam()`  
-- **Rmarkdown Report Templates**: - *HTML Doc* for quick and light
-documents in HTML format.  
-- *Paged Report* for professional looking PDF and HTML reports
-(lightweight and fast rendering).  
 - **Datasets**: tables useful for common issues regarding data cleaning
 activities (e.g. `codice_ateco` or `decodifica_comuni`).  
 - **Operators**: expansions operators to improve readability of code.

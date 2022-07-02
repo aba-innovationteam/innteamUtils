@@ -9,7 +9,8 @@ analysis_innteam = function(path, ...) {
   ProjectName = paste0(path)
 
   ### Setup ReadMe Files ----
-  readme = c(paste0("# ", ProjectName, "  "),
+  readme = c(" ",
+             paste0("# ", ProjectName, "  "),
               " ",
               paste0("**Client Name:**", " ", CLIENT, "  "),
               " ",
