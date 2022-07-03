@@ -1,8 +1,6 @@
 
 analysis_innteam = function(path, ...) {
 
-  path = normalizePath(path, mustWork = FALSE)
-
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
   dots = list(...)

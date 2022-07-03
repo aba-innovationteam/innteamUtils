@@ -16,15 +16,15 @@ Label: Description
 Default:
 Position: Right
 
-Parameter: DS1
+Parameter: CREATOR
 Widget: TextInput
-Label: Data Scientist 1
+Label: Author
 Default:
 Position: Right
 
-Parameter: DS2
+Parameter: MAINTAINER
 Widget: TextInput
-Label: Data Scientist 2
+Label: Maintainer
 Default:
 Position: Right
 

@@ -1,8 +1,6 @@
 
 shiny_innteam = function(path, ...) {
 
-  path = normalizePath(path, mustWork = FALSE)
-
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
   dots = list(...)
@@ -18,8 +16,8 @@ shiny_innteam = function(path, ...) {
               " ",
               paste0("**Project Description:**", " ", PROJECT, "  "),
               " ",
-              paste0("**Data Scientist 1:**", " ", DS1, "  "),
-              paste0("**Data Scientist 1:**", " ", DS2, "  "),
+              paste0("**Data Scientist 1:**", " ", CREATOR, "  "),
+              paste0("**Data Scientist 1:**", " ", MAINTAINER, "  "),
               "",
               paste0("# Folder Structure", "  "),
               " ",
@@ -38,7 +36,21 @@ shiny_innteam = function(path, ...) {
               "INPUT         |  contains the processed data used for the App start up",
               "OUTPUT        |  contains the output data produced by the App",
         paste("SETUP         |  contains R scripts regarding packages, theme and other preparation tasks."),
-              "SCRATCH       |  contains R scripts used for trial and building outside interactive env.")
+              "SCRATCH       |  contains R scripts used for trial and building outside interactive env.",
+              "  ",
+        paste0("# Abstract", "  "),
+              " ",
+              "App Overall Functionalities:",
+              " ",
+              "Feature              |  Description",
+              "---------------------|----------------------------------------------------------",
+              " ",
+              "1. Data Upload       |  Browse Files to be Analyzed",
+              "2. Descriptive Stats |  General Descriptive statistics tables and plots",
+              "3. Modelling         |  Try pug-n-play statistical learning models",
+              "4. Export            |  Export clean data, models, tables and plots"
+
+  )
 
 
   # write to readme file
@@ -60,7 +72,7 @@ shiny_innteam = function(path, ...) {
   if(meta) {
 
     dir.create(paste0(path, '/.ProjData'))
-    ProjData = list(ProjectName = ProjectName, DS1 = DS1, DS2 = DS2, CLIENT = CLIENT, PROJECT = PROJECT)
+    ProjData = list(ProjectName = ProjectName, CREATOR = CREATOR, MAINTAINER = MAINTAINER, CLIENT = CLIENT, PROJECT = PROJECT)
     write.dcf(ProjData, file.path(path, '/.ProjData/Data.dcf'))
 
   }
