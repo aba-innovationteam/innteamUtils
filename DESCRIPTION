@@ -1,5 +1,5 @@
 Package: innteamUtils
-Title: Utilities: Themes, Datasets and Functions by Innovation Team
+Title: Utilities: Themes, Datasets and Functions for Innovation Team
 Version: 1.5.0
 Authors@R: 
     person(given = "Alejandro",
