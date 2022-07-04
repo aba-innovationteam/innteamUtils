@@ -1,8 +1,11 @@
-pandoc: 2.11.4
-pkgdown: 1.6.1
+pandoc: 2.17.1.1
+pkgdown: 2.0.5
 pkgdown_sha: ~
 articles:
   Datasets: Datasets.html
   theme_innteam: theme_innteam.html
-last_built: 2021-09-22T14:35Z
+last_built: 2022-07-04T15:36Z
+urls:
+  reference: https://aba-innovationteam.github.io/innteamUtils/reference
+  article: https://aba-innovationteam.github.io/innteamUtils/articles
 

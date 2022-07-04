@@ -1,3 +1,12 @@
+url: https://aba-innovationteam.github.io/innteamUtils/
 template:
-  params:
-    bootswatch: flatly
+  package: tidytemplate
+  bootstrap: 5
+  bootswatch: materia
+  bslib:
+    pkgdown-nav-height: 100px
+    primary: '#015958'
+    code_font: {google: "JetBrains Mono"}
+
+
+
