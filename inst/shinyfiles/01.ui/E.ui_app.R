@@ -16,14 +16,21 @@ ui_app <-
   # Header ================================================================================
 
 navbarPage(
+      
+      tags$style(".topimg {
+                            margin-left:5px;
+                            margin-right: -15px;
+                            margin-top: -21px;
+                            margin-bottom: -60px;
+                          }"),    
 
-      title = div(img(src = "mbsc.jpg", height = "100%", width = "100%", align = "center")),
-
-  windowTitle = 'APP - Trial',
-  fluid = TRUE,
-  theme = default_th,
-  header = NULL,
-  footer = NULL,
+      title = div(class = "topimg", img(src = "mbsc.jpg", width = '100%', height = '45px')),
+  
+      windowTitle = 'APP - Trial',
+      fluid = TRUE,
+      theme = default_th,
+      header = NULL,
+      footer = NULL,
 
 
 
