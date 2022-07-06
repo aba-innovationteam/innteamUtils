@@ -38,13 +38,13 @@ navbarPage(
 
 navbarMenu(
 
-     title = 'Instructions',
+     title = 'Input',
 
      tabPanel(
 
-          title = '1. Input & Output',
+          title = 'Single File',
 
-          'placeholder'
+          t_upload_single 
 
      ),
 
@@ -54,9 +54,9 @@ navbarMenu(
 
      tabPanel(
 
-          title = '2. Setting',
+          title = 'Multiple Files',
 
-          'placeholder'
+          t_upload_multi = 'placeholder'
 
      ),
 

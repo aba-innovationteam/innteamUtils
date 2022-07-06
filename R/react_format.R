@@ -19,8 +19,8 @@
 react_format = reactable::reactableTheme(
 
   color = "#363636",
-  tableStyle = list(fontFamily = 'Open Sans', fontWeight = 400, fontSize = 13),
-  headerStyle = list(fontFamily = "Open Sans", backgroundColor = "#225E64", color = 'white', fontWeight = 300, fontSize = 14),
+  tableStyle = list(fontWeight = 400, fontSize = 13),
+  headerStyle = list(backgroundColor = "#225E64", color = 'white', fontWeight = 300, fontSize = 14),
 
   backgroundColor = "#ffffff",
   borderColor = "#dfe2e5",

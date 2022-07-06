@@ -5,7 +5,7 @@ default_th <-
 
       version = 5,
 
-        bootswatch = 'materia',
+        bootswatch = 'lux',
 
             primary = "#015958",
             secondary = '#8FBCBB',
@@ -14,7 +14,7 @@ default_th <-
             warning = '#81A1C1',
             danger = '#BF616A',
 
-      font_scale = 1
+      font_scale = 0.85
 
         )
 

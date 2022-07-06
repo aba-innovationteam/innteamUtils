@@ -17,8 +17,8 @@ source(file.path('00.setup', "C.preparation.R"))
 # UI ===============================================================
 source(file.path('01.ui', "A.sliders.R"))
 source(file.path('01.ui', "B.buttons.R"))
-source(file.path('01.ui', "C.sidebar_panel.R"))
-source(file.path('01.ui', "D.main_panel.R"))
+source(file.path('01.ui', "C.tabs.R"))
+source(file.path('01.ui', "D.modules.R"))
 source(file.path('01.ui', "E.ui_app.R"))
 
 
