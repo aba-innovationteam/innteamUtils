@@ -13,11 +13,30 @@
 ui_app <-
 
 
-  # Header ================================================================================
+# Header ================================================================================
 
 navbarPage(
+  
+      tags$head(
+        
+        tags$style("
+        
+         .fluid_column{ border-style: solid;
+                        border-color: rgba(0,0,0,0.1);
+                        border-width: thin; }"
+                   )), 
       
-      tags$style(".topimg {
+      tags$head(
+        
+        tags$style("
+        
+         .fixed_column{ min-height: 350px;
+                        border-style: solid;
+                        border-color: rgba(0,0,0,0.1);
+                        border-width: thin; }"
+        )),       
+      
+       tags$style(".topimg {
                             margin-left:5px;
                             margin-right: -15px;
                             margin-top: -21px;
@@ -34,8 +53,8 @@ navbarPage(
 
 
 
-# Intro Panel -------------------------------------------------------
-
+# A. Input =============================================================================
+  
 navbarMenu(
 
      title = 'Input',
@@ -58,30 +77,27 @@ navbarMenu(
 
           t_upload_multi = 'placeholder'
 
-     ),
+     )
+     
+),     
 
-
-     "----",
-
+     
+     
+# X. Analysis =============================================================================
+     
      tabPanel(
 
-          title = '3. Dashboard',
+          title = 'Analysis',
 
           'placeholder'
 
-     )
-
-),
+     ),
 
 
 
 # : ============================================================================================================================
 
 
-
-
-
-tags$head(tags$style(HTML('.navbar-brand {width: 200px; font-size: 1.2rem ; text-align:center;}')))
 
 
 

@@ -16,6 +16,7 @@ install.packages('data.table')
 install.packages('openxlsx')
 install.packages('vroom')
 install.packages('ggplot2')
+install.packages('ggcorrplot')
 install.packages('plotly')
 install.packages('reactable')
 
