@@ -31,7 +31,7 @@ t_upload_single =
                   fileInput("upload_single", NULL, accept = c('.csv', '.tsv', '.xlsx')),
                   
                   
-                  br(), 
+                  hr(), 
                   
                   
                   h5('Correlation Matrix'),
@@ -51,7 +51,7 @@ t_upload_single =
             
             mainPanel(
             
-              style = 'min-width: 1425px',
+              style = 'min-width: 1400px',
               
               fluidRow(
 
@@ -91,7 +91,7 @@ t_upload_single =
                   
                   h4('Plot Variables', style = 'text-align: center;'),
                   
-                  plotOutput(outputId = 'p_single_biplot')
+                  plotlyOutput(outputId = 'p_single_biplot')
                   
                 )
                 

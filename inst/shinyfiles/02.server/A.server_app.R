@@ -106,12 +106,15 @@ server_app = function(input, output, session) {
       output$p_single_correlation_matrix = renderPlotly({
         
         req(data_single())
-        req(input$s_input_selector_rm)
         
         dt_cor = copy(data_single())
         
+        if(!is.null(input$s_input_selector_rm)) {
+            
         set(dt_cor, , input$s_input_selector_rm, NULL)
 
+}
+                        
         model.matrix( ~ 0 + ., data = dt_cor) |> 
           cor(use = "pairwise.complete.obs") %>% 
           ggcorrplot(show.diag = F, type = "lower", lab = TRUE, lab_size = 2, colors = c("#BF616A", "white", "#80CFCC")) |> 
@@ -123,7 +126,7 @@ server_app = function(input, output, session) {
       
   ### Render Plot: Plot Variables -------------------------
 
-      output$p_single_biplot = renderPlot({
+      output$p_single_biplot = renderPlotly({
         
         req(data_single())
 
@@ -131,11 +134,14 @@ server_app = function(input, output, session) {
         
          dt_plot |> 
           
-          ggplot(aes(x = get(input$s_input_selector_x), y = get(input$s_input_selector_x))) + 
-          
-          geom_point(size = 3, color = '#C06C84') +
-            
-            geom_smooth(color = '#355C7D')
+          plot_ly(x = ~get(input$s_input_selector_x),
+                  y = ~get(input$s_input_selector_y),
+                  color = I('#C06C84'),
+                  marker = list(size = 10),
+                  type = "scatter") |> 
+             
+             layout(xaxis = list(title = input$s_input_selector_x), 
+                    yaxis = list(title = input$s_input_selector_y))
         
         
       })            
