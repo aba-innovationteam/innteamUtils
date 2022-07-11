@@ -3,8 +3,9 @@ pkgdown: 2.0.5
 pkgdown_sha: ~
 articles:
   Datasets: Datasets.html
+  Logit: Logit.html
   theme_innteam: theme_innteam.html
-last_built: 2022-07-07T17:25Z
+last_built: 2022-07-11T09:53Z
 urls:
   reference: https://aba-innovationteam.github.io/innteamUtils/reference
   article: https://aba-innovationteam.github.io/innteamUtils/articles
