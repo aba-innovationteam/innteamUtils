@@ -1,0 +1,117 @@
+---
+title: "Logit Regression"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Classification with Logit Regression}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#",
+    error = FALSE,
+     tidy = FALSE,
+    cache = FALSE,
+ collapse = TRUE
+)
+```
+
+```{r setup}
+library(innteamUtils)
+library(data.table)
+library(aod)
+library(ggplot2)
+
+theme_set(theme_innteam())
+
+```
+
+https://stats.oarc.ucla.edu/r/dae/logit-regression/#:~:text=Logistic%20regression%2C%20also%20called%20a,combination%20of%20the%20predictor%20variables.
+
+## Introduction
+
+Logistic regression, also called a **logit model**, is mostly used to model dichotomous outcome variables. It can be said it is a **Supervised Learning** method used for **Classification**. In the logit model the *log odds* of the outcome is modeled as a *linear combination of the predictor variables*.
+
+Please note that the purpose of this page is to show how to use various data analysis commands. It does not cover all aspects of the research process which researchers are expected to do. In particular, it does not cover data cleaning and checking, verification of assumptions, model diagnostics and potential follow-up analyses.
+
+## Table of Contents
+
+Currently the following sets are available:  
+
+- `Data Description`: a long-format table containing **4 NUTS levels** from EUROSTAT for Italy.  
+- `Analysis methods you might consider`: a wide-format table containing *old* and *new* Italian municipalities (and higher level denomination) names.  
+- `Using the logit model`: a long-format table containing **all NACE Rev.2 levels** in Italian language.  
+- `Things to consider`: simple table containing the number of insurance agencies and subagents by Italian province. Strictly for internal use only.
+
+
+
+### Description of the Data
+
+For our data analysis below, we are going to expand into graduate school available from the **UCLA Statistics Department** website. 
+
+```{r}
+
+mydata = fread("https://stats.idre.ucla.edu/stat/data/binary.csv")
+## view the first few rows of the data
+head(mydata)
+tail(mydata)
+
+```
+
+This dataset has a binary response (outcome, dependent) variable called `admit.` There are three predictor variables: `gre`, `gpa` and `rank.` We will treat the variables `gre` and `gpa` as **continuous.** The variable `rank` takes on the values 1 through 4. Institutions with a `rank` of 1 have the highest prestige, while those with a `rank` of 4 have the lowest. We can get basic descriptives for the entire data set by using `summary.` To get the standard deviations, we use `sapply` to apply the `sd` function to each variable in the dataset.
+
+```{r}
+
+summary(mydata)
+
+```
+```{r}
+
+sapply(mydata, sd)
+
+```
+
+```{r}
+## two-way contingency table of categorical outcome and predictors we want
+## to make sure there are not 0 cells
+
+xtabs(~admit + rank, data = mydata)
+```
+
+### Analysis methods you might consider
+
+Below is a list of some analysis methods you may have encountered. Some of the methods listed are quite reasonable while others have either fallen out of favor or have limitations.  
+
+- **Logistic regression**, the focus of this page.  
+
+- **Probit regression**. Probit analysis will produce results similar logistic regression. The choice of probit versus logit depends largely on individual preferences.  
+
+- **OLS regression**. When used with a binary response variable, this model is known as a linear probability model and can be used as a way to describe conditional probabilities. However, the errors (i.e., residuals) from the linear probability model violate the homoskedasticity and normality of errors assumptions of OLS regression, resulting in invalid standard errors and hypothesis tests. 
+
+- **Two-group discriminant function analysis**. A multivariate method for dichotomous outcome variables.  
+
+
+### Using the Logit Model
+
+The code below estimates a **logistic regression** model using the `glm` (generalized linear model) function. First, we convert `rank` to a factor to indicate that rank should be treated as a categorical variable.
+
+```{r}
+
+setDT(mydata)
+mydata[, rank := factor(rank)]
+
+mylogit = glm(admit ~ gre + gpa + rank, data = mydata, family = "binomial")
+
+```
+
+Since we gave our model a name (`mylogit`), R will not produce any output from our regression. In order to get the results we use the summary command:
+
+```{r}
+
+summary(mylogit)
+
+```
+
+
